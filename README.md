@@ -2,6 +2,8 @@
 # <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/icon_logo.png" width="5%" height="5%"> Unofficial Stalcraft API
 Документация внутреннего HTTP/HTTPS API лаунчера и игры.
 
+## EXBO Launcher (RU)
+
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/metrics](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetmetrics) - Отправка метрики
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/test](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettest) - Проверка соединения перед авторизацией
@@ -222,8 +224,17 @@ Torrent трекеры, используются для скачивания и 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="5%" height="5%"> https://backend.stalcraftx.ru/session/game
 Ссылка, отвечающая за получение ключей для доступа к backend.stalcraft.ru.
 
+Пример ответа:
+```json
+{
+   "connectToken" : "...",
+   "session" : "...",
+   "udp_mode" : "RECOMMENDED"
+}
+```
+
 Имеет параметры:
-- `login=User` - Логин пользователя EXBO
+- `login=User` - Логин пользователя EXBO / `login=stm:123123123123123123` - ID аккаунта STEAM
 - `session=wIHhcjLP%abcde123456789009876543211234567890` - Сессия
 - `distributor=EXBO` - Дистрибьютор игры
 - `connectPubKey=abcdeedcba123456789009887654321%3D` - Ключ для подключения
@@ -269,7 +280,7 @@ Torrent трекеры, используются для скачивания и 
 ```
 
 Имеет параметры:
-- `login=User` - Логин пользователя EXBO
+- `login=User` - Логин пользователя EXBO / `login=stm:123123123123123123` - ID аккаунта STEAM
 
 Пример ссылки с правильными параметрами:
 - ```https://backend.stalcraftx.ru/address_list?login=User```
@@ -362,7 +373,7 @@ Torrent трекеры, используются для скачивания и 
 ```
 
 Имеет параметры:
-- `login=User` - Логин пользователя EXBO
+- `login=User` - Логин пользователя EXBO / `login=stm:123123123123123123` - ID аккаунта STEAM
 - `session=abcde123456789009876543211234567890` - Сессия
 - `distributor=EXBO` - Дистрибьютор игры
 
