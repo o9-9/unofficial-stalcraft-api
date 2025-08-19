@@ -36,7 +36,8 @@
 - IP и геолокация 
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/test
-Ссылка, которая вызывается при открытии лаунчера.
+Ссылка, которая вызывается при авторизации в лаунчере. Проверяет безопасность подключения. Если трафик нестандартный или подозрительный - вызывается предупреждение (см. изображение)
+ <img width="827" height="120" alt="image" src="https://github.com/user-attachments/assets/432b0dc9-4189-413b-8dbc-553f01a8e3f4" />
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/launcher?list=true
 Ссылка для получения хеш-суммы важных технических модулей в лаунчере.
@@ -369,7 +370,7 @@ Torrent трекеры, используются для скачивания и 
 - ```https://backend.stalcraftx.ru/characters/list?login=User&session=abcde12345678900988765432112345678900987654321234567890253D&distributor=EXBO```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> https://stalcraft.net/webhook/region
-Ссылка которая отображает IP и местоположение пользователя
+Ссылка для Discord вебхука игры, в ответе отображает IP, регион серверов и страну пользователя
 
 Пример ответа:
 ```json
