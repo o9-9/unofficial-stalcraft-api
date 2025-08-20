@@ -2,23 +2,36 @@
 # <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/icon_logo.png" width="5%" height="5%"> Unofficial Stalcraft API
 Документация внутреннего HTTP/HTTPS API лаунчера и игры.
 
-## EXBO Launcher (RU)
+### Условные обозначения
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="3%" height="3%"> - GET-Запрос
+
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="3%" height="3%"> - POST-Запрос
+
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/steam_logo.png" width="3%" height="3%"> - Вызываются только на STEAM* клиенте
+
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="3%" height="3%"> - Вызываются только на EXBO* лаунчере
+
+*Если значок отсутствует - обе платформы используют эти запросы
+
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> EXBO Launcher/Steam (RU) <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/steam_logo.png" width="5%" height="5%">
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/metrics](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetmetrics) - Отправка метрики
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/test](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettest) - Проверка соединения перед авторизацией
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/test](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettest) - Проверка соединения перед авторизацией
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/launcher?list=true](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlauncherlisttrue) - Информация для технических файлов лаунчера
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/launcher?list=true](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlauncherlisttrue) - Информация для технических файлов лаунчера
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetauth) - Авторизация в лаунчере
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetauth) - Авторизация в лаунчере
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlistservers) - Информация об игре: Онлайн, HTTP сиды, IP-адрес сервера и т.д.
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlistservers) - Информация об игре: Онлайн, HTTP сиды, IP-адрес сервера и т.д.
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры (для скачивания/раздачи файлов игры через протокол TORRENT)
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры (для раздачи файлов игры через протокол TORRENT)
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/joinGame](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetjoingame) - Запрос для входа в игру
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://m-cdn.exbo.net | http://exbo.b-cdn.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httpm-cdnexbonet--httpexbob-cdnnet) - CDN-сервера (для скачивания файлов игры через CDN запросы)
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/torrentData](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettorrentdata) - Файл подкачки Torrent-содержимого
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/joinGame](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetjoingame) - Запрос для входа в игру
+
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/torrentData](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettorrentdata) - Файл подкачки Torrent-содержимого
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/session/game](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httpsbackendstalcraftxrusessiongame) - Запрос идентификатора текущей сессии игры (для back-end запросов) 
 
@@ -37,11 +50,11 @@
 - Профилирование (время выполнения операций)
 - IP и геолокация 
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/test
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/test
 Ссылка, которая вызывается при авторизации в лаунчере. Проверяет безопасность подключения. Если трафик нестандартный или подозрительный - вызывается предупреждение (см. изображение)
  <img width="827" height="120" alt="image" src="https://github.com/user-attachments/assets/432b0dc9-4189-413b-8dbc-553f01a8e3f4" />
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/launcher?list=true
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/launcher?list=true
 Ссылка для получения хеш-суммы важных технических модулей в лаунчере.
 
 Пример ответа:
@@ -57,7 +70,7 @@
 373280 native/ExboOptimizer.exe d10e42af7d324091e35fe8f12263a04b49db8f47
 ```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/auth
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/auth
 Ссылка для авторизации пользователя EXBO в лаунчере. В ответе содержит токен, который используется для запросов на ссылки ниже.
 
 Пример ответа:
@@ -93,7 +106,7 @@
 Пример ссылки с правильными параметрами:
 - ```http://launcher.stalcraft.net/auth?state=false&login=User&session=11111111-2222-3333-4444-555555555555&bootstrap=a1b2c3d4a1b2c3d4a1b2c3d4a1b2c3d4&hwid=abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123&protocol_version=3&id=00000000-9999-8888-7777-666666666666&start=true```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/listServers
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/listServers
 Ссылка, отвечающая за получение информации об игровом сервере и игре STALCRAFT, такие как онлайн на сервере, HTTP сиды, размер игры в байтах и т.д.
 
 Пример короткого ответа (full=false)
@@ -184,8 +197,8 @@
 Пример ссылки с правильными параметрами:
 - ```http://launcher.stalcraft.net/listServers?full=false&token=11111111-2222-3333-4444-555555555555&login=User```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://tracker1.stalcraft.net  |   http://tracker2.stalcraft.net
-Torrent трекеры, используются для скачивания и раздачи файлов игры через файл `stalcraft.torrent.bin`
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://tracker1.stalcraft.net  |   http://tracker2.stalcraft.net
+Torrent трекеры, используются для раздачи файлов игры через файл `stalcraft.torrent.bin`
 
 Имеет параметры:
 - `info_hash=12345678900987654321` - Хеш скачиваемого файла
@@ -199,7 +212,21 @@ Torrent трекеры, используются для скачивания и 
 Пример ссылки с правильными параметрами:
 - ```http://tracker1.stalcraft.net:6767/announce?info_hash=%af%1e%3d%ad%25j%b7%0d%bcrH0Z%a8%d3%a68%3c%27%7b&peer_id=-LT12J0-nMr-gyluoL.3&port=52580&uploaded=0&downloaded=0&left=292552704&corrupt=0&key=C87A7012&event=paused&numwant=200&compact=1&no_peer_id=1&supportcrypto=1&redundant=0```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/joinGame
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://m-cdn.exbo.net | http://exbo.b-cdn.net
+CDN ссылки, используются для скачивания файлов игры непосредственно с серверов EXBO
+
+Оба домена отвечают за скачивание файлов игры (модели, текстуры, спрайты, анимации, классы игры, технические исполняемые файлы)
+
+Имеет параметры:
+- `stalcraft` - Название игры
+- `stalcraft` - ID сервера
+- `ab123c321abc123abccab123321123` - Хеш файла из структуры [stalcraft.map](https://sc-file.readthedocs.io/en/latest/formats.html#map-mapping-hashes-hashmap-bt)
+
+Пример ссылки с правильными параметрами:
+- ```http://exbo.b-cdn.net/stalcraft/stalcraft/4afe071af1859daef6e360b74eaca32cd8324f5d```
+- ```http://m-cdn.exbo.net/stalcraft/stalcraft/4afe071af1859daef6e360b74eaca32cd8324f5d```
+
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/joinGame
 Ссылка, которая вызывается при входе в игру.
 
 Имеет параметры:
@@ -210,8 +237,10 @@ Torrent трекеры, используются для скачивания и 
 Пример ссылки с правильными параметрами:
 - ```http://launcher.stalcraft.net/joinGame?token=11111111-2222-3333-4444-555555555555&login=User&protocol_version=3```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/torrentData
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/torrentData
 Ссылка, отвечающая за подкачку Torrent-содержимого, которая вызывается во время игры.
+
+Само содержимое представляет из себя уникальный формат, предпологаемо похожий на файл [stalcraft.map](https://github.com/onejeuu/sc-file/blob/master/templates/TORRENT.MAP.bt) сжатый методом [gzip](https://ru.wikipedia.org/wiki/Gzip). Сама структура представляет из себя список файлов и хеша, который используется CDN серверами для подкачки сломанных, недостающих файлов игры (или для загрузки новых файлов при обновлении)
 
 Имеет параметры:
 - `id=stalcraft`- ID сервера на который произошел вход
