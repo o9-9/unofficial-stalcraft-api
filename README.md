@@ -71,7 +71,86 @@
 ```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/auth
-Ссылка для авторизации пользователя EXBO в лаунчере. В ответе содержит токен, который используется для запросов на ссылки ниже.
+Ссылка для авторизации пользователя EXBO в лаунчере. Используется в лаунчере в трёх вариациях.
+
+### 1. Авторизация по логину/паролю
+Вызывается при обычном вводе логина и пароля в лаунчере. Нужен для получения хеша пароля
+
+Пример ответа:
+```
+{
+  "displayLogin": null,
+  "genericError": null,
+  "licenseAccepted": false,
+  "loginURL": null,
+  "mailAbbreviation": null,
+  "newEmail": null,
+  "newEmailHash": null,
+  "secretHash": "asdasdasdasd.1231231",
+  "session": null,
+  "timeLeft": -1,
+  "token": null,
+  "trueLogin": null,
+  "type": "POW_BCRYPT",
+  "untilChangingFinish": null
+}
+```
+
+Имеет параметры:
+
+- `state=true` -
+- `login=LoginUser` - Логин пользователя EXBO
+- `pass=Qwerty123123` - Пароль
+- `bootstrap=123123123123123132131321313213123213` - Хеш запуска
+- `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID
+- `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
+- `protocol_version=3` - Версия протокола лаунчера
+- `start=true` - 
+
+Пример правильной ссылки:
+
+```http://launcher.stalcraft.net/auth?state=true&login=LoginUser&pass=Qwerty123123&bootstrap=123123123123123132131321313213123213&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&id=43211234-1234-4321-1234-12312312312333&protocol_version=3&start=true```
+
+### 2. Авторизация с хешем пароля
+Второй запрос авторизации, если на самом аккаунте нету 2FA аунтефикации то происходит вход в лаунчер.
+
+Пример ответа:
+
+```
+{
+  "displayLogin": null,
+  "genericError": null,
+  "licenseAccepted": true,
+  "loginURL": null,
+  "mailAbbreviation": null,
+  "newEmail": null,
+  "newEmailHash": null,
+  "secretHash": null,
+  "session": null,
+  "timeLeft": -1,
+  "token": null,
+  "trueLogin": "UserLogin",
+  "type": "GOOGLE_AUTH",
+  "untilChangingFinish": null
+}
+```
+
+Имеет параметры:
+
+- `state=true` -
+- `login=LoginUser` - Логин пользователя EXBO
+- `pass=Qwerty123123` - Пароль
+- `passhash=asd3$d2sa$a1bc$.12312asd12313asd213.123dsa` - Хеш пароля 
+- `bootstrap=123123123123123132131321313213123213` - Хеш запуска
+- `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID
+- `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
+- `protocol_version=3` - Версия протокола лаунчера
+
+Пример правильной ссылки:
+
+```http://launcher.stalcraft.net/auth?state=true&login=LoginUser&pass=Qwerty123123&passhash=asd3$d2sa$a1bc$.12312asd12313asd213.123dsa&bootstrap=123123123123123132131321313213123213&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&id=43211234-1234-4321-1234-12312312312333&protocol_version=3```
+
+### 3. Авторизация с использование 2FA кода (приложения/почты)
 
 Пример ответа:
 
@@ -85,26 +164,25 @@
   "newEmail": null,
   "newEmailHash": null,
   "secretHash": null,
-  "session": "11111111-2222-3333-4444-555555555555",
+  "session": "12345678-1234-1234-1234-123456789012",
   "timeLeft": -1,
-  "token": "66666666-7777-8888-9999-000000000000",
-  "trueLogin": "User",
+  "token": "12345678-1234-1234-1234-123456789012",
+  "trueLogin": "UserLogin",
   "type": "OK",
   "untilChangingFinish": null
 }
 ```
-Имеет параметры:
-- `state=false` 
-- `login=User` - Логин пользователя EXBO
-- `session=11111111-2222-3333-4444-555555555555` - Сессия, которая выдаётся из ответа на ссылку
-- `bootstrap=a1b2c3d4a1b2c3d4a1b2c3d4a1b2c3d4` - Код запуска
-- `hwid=abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123` - HWID (HardWare ID) компьютера
-- `protocol_version=3` - Версия сетевого протокола
-- `id=00000000-9999-8888-7777-666666666666` - ID
-- `start=true` 
 
-Пример ссылки с правильными параметрами:
-- ```http://launcher.stalcraft.net/auth?state=false&login=User&session=11111111-2222-3333-4444-555555555555&bootstrap=a1b2c3d4a1b2c3d4a1b2c3d4a1b2c3d4&hwid=abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123&protocol_version=3&id=00000000-9999-8888-7777-666666666666&start=true```
+Имеет параметры:
+
+- `secret=123456` - Код приложения/почта
+- `login=UserLogin` - Логин пользователя EXBO
+- `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
+- `protocol_version=3` - Версия протокола лаунчера
+
+Пример правильной ссылки:
+
+```http://launcher.stalcraft.net/auth?secret=123456&login=UserLogin&id=43211234-1234-4321-1234-1231231231233&protocol_version=3```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="5%" height="5%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="5%" height="5%"> http://launcher.stalcraft.net/listServers
 Ссылка, отвечающая за получение информации об игровом сервере и игре STALCRAFT, такие как онлайн на сервере, HTTP сиды, размер игры в байтах и т.д.
