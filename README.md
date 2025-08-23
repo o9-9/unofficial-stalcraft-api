@@ -32,6 +32,7 @@
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/joinGame](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetjoingame) - Запрос для входа в игру
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="2%" height="2%"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [http://launcher.stalcraft.net/torrentData](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnettorrentdata) - Ссылка подкачки stalcraft.torrent.bin (TORRENT-подобного файла для скачивания файлов игры)
+
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/session/game](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httpsbackendstalcraftxrusessiongame) - Запрос идентификатора текущей сессии игры (для back-end запросов) 
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="2%" height="2%"> [https://backend.stalcraftx.ru/address_list](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httpsbackendstalcraftxruaddress_list) - Список IP-адресов игровых серверов
