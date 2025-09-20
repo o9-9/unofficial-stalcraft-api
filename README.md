@@ -43,6 +43,10 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.net/webhook/region](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httpsstalcraftnetwebhookregion) - Запрос для получения IP пользователя для Discord-вебхука
 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/exens.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://a0a070fc-75cc-4e3f-8dd2-7c1ea74c9ab1.selstorage.ru/service.json](https://github.com/Art3mLapa/unofficial-stalcraft-api#--httpsa0a070fc-75cc-4e3f-8dd2-7c1ea74c9ab1selstorageruservicejson) - Эндпоинт для получения актуальной ссылки для скачивания драйвера анти-чита EXENS
+
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/exens.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://a0a070fc-75cc-4e3f-8dd2-7c1ea74c9ab1.selstorage.ru/exens_service.exe](https://github.com/Art3mLapa/unofficial-stalcraft-api#--httpsa0a070fc-75cc-4e3f-8dd2-7c1ea74c9ab1selstorageruexens_serviceexe) - Ссылка для скачивания актуального драйвера EXENS
+
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="50" height="50"> http://launcher.stalcraft.net/metrics
 Ссылка, отвечающая за отправку метрики игрока для аналитики.
 Метрика содержит:
