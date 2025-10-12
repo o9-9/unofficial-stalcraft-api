@@ -1,0 +1,48 @@
+{
+  "mode": "roxy",
+  "pools": [
+    {
+      "name": "GAME-EU",
+      "tunnels": [
+        {
+          "name": "GAME-EU-2",
+          "address": "79.127.241.67:29450"
+        },
+        {
+          "name": "GAME-EU-3",
+          "address": "79.127.241.68:29450"
+        },
+        {
+          "name": "GAME-EU-4",
+          "address": "79.127.241.69:29450"
+        },
+        {
+          "name": "GAME-EU-5XS",
+          "address": "89.222.124.35:29450"
+        },
+        {
+          "name": "GAME-EU-6XS",
+          "address": "89.222.124.36:29450"
+        }
+      ]
+    },
+    {
+      "name": "WAW",
+      "tunnels": [
+        {
+          "name": "WAW-ROXY3",
+          "address": "57.128.202.23:29450"
+        },
+        {
+          "name": "WAW-ROXY4",
+          "address": "146.59.110.238:29450"
+        },
+        {
+          "name": "WAW-ROXY5",
+          "address": "146.59.111.52:29450"
+        }
+      ]
+    }
+  ],
+  "clientToTunnelRttWeight": 1
+}
