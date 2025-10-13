@@ -1,0 +1,28 @@
+{
+  "mode": "roxy",
+  "pools": [
+    {
+      "name": "GAME-SEA",
+      "tunnels": [
+        {
+          "name": "GAME-SEA-2",
+          "address": "169.150.243.166:29450"
+        },
+        {
+          "name": "GAME-SEA-3",
+          "address": "79.127.213.146:29450"
+        }
+      ]
+    },
+    {
+      "name": "SYD",
+      "tunnels": [
+        {
+          "name": "SYD-ROXY1",
+          "address": "143.244.63.114:29450"
+        }
+      ]
+    }
+  ],
+  "clientToTunnelRttWeight": 1
+}
