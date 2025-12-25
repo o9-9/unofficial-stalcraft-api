@@ -59,9 +59,9 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://backend.stalnote.ru/noauthorize/GameItems/uniq](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsbackendstalnoterunoauthorizegameitemsuniq) - Скрытые и публичные ID предметов, используемых в EAPI
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/next-api/auction-history](https://github.com/Art3mLapa/unofficial-stalcraft-api/blo/main/README.md#--httpsstalcraftwikinext-apiauction-history) - История лотов предмета на аукциона 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/auction-history](https://github.com/Art3mLapa/unofficial-stalcraft-api/blo/main/README.md#--httpsstalcraftwikinext-apiauction-history) - История лотов предмета на аукциона 
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/next-api/available-lots](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsstalcraftwikinext-apiavailable-lots) - Активные лоты предмета на аукционе
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/available-lots](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsstalcraftwikinext-apiavailable-lots) - Активные лоты предмета на аукционе
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/exbo/item/barter/](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsstalcraftwikiapiexboitembarter) - Рецепт бартера предмета
 
@@ -664,7 +664,7 @@ CDN сервер для системы EXENS
 ]
 ```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/next-api/auction-history
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/auction-history
 Получение истории лотов на аукционе
 
 Пример ответа:
@@ -691,10 +691,10 @@ CDN сервер для системы EXENS
 `id=g43rp` - ID предмета из [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database)
 
 Пример правильной ссылки:
-```https://stalcraft.wiki/next-api/auction-history?region=ru&id=g43rp```
+```https://stalcraft.wiki/api/auction-history?region=ru&id=g43rp```
 
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/next-api/available-lots
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/available-lots
 
 Активные лоты предмета на аукционе
 
@@ -722,7 +722,7 @@ CDN сервер для системы EXENS
 `id=009n9` - ID предмета из [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database)
 
 Пример правильной ссылки:
-```https://stalcraft.wiki/next-api/available-lots?region=ru&id=009n9```
+```https://stalcraft.wiki/api/available-lots?region=ru&id=009n9```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/exbo/item/barter/
 Получение информации об бартере предмета.
