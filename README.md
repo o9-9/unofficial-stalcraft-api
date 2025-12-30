@@ -59,7 +59,7 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://backend.stalnote.ru/noauthorize/GameItems/uniq](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsbackendstalnoterunoauthorizegameitemsuniq) - Скрытые и публичные ID предметов, используемых в EAPI
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/auction-history](https://github.com/Art3mLapa/unofficial-stalcraft-api/blo/main/README.md#--httpsstalcraftwikinext-apiauction-history) - История лотов предмета на аукциона 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/slug/api/auction-history](https://github.com/Art3mLapa/unofficial-stalcraft-api/blo/main/README.md#--httpsstalcraftwikinext-apiauction-history) - История лотов предмета на аукционе
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/available-lots](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsstalcraftwikinext-apiavailable-lots) - Активные лоты предмета на аукционе
 
@@ -664,7 +664,7 @@ CDN сервер для системы EXENS
 ]
 ```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/auction-history
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/slug/api/auction-history
 Получение истории лотов на аукционе
 
 Пример ответа:
@@ -690,8 +690,11 @@ CDN сервер для системы EXENS
 `region=ru` - регион игры
 `id=g43rp` - ID предмета из [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database)
 
+Обязательный заголовок при запросе:
+`X-Internal-Key=cb2b4565-a129-4e9c-bbd1-88427f79468d`
+
 Пример правильной ссылки:
-```https://stalcraft.wiki/api/auction-history?region=ru&id=g43rp```
+```https://stalcraft.wiki/slug/api/auction-history?region=ru&id=5rwq```
 
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/available-lots
