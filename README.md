@@ -104,8 +104,8 @@
 `http://launcher.stalcraft.net/launcher?name=native/jlibtorrent.dll`
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> http://launcher.stalcraft.net/auth
-Ссылка для авторизации пользователя EXBO в лаунчере. Используется в лаунчере в трёх вариациях.
-
+Ссылка для авторизации пользователя EXBO в лаунчере. Используется в лаунчере в четырёх вариациях.
+Так-же у ссылки есть вариант домена для EU игроков лаунчера: http://launcher-global.stalcraft.net/
 ### 1. Авторизация по логину/паролю
 Вызывается при обычном вводе логина и пароля в лаунчере. Нужен для получения хеша пароля
 
@@ -258,7 +258,7 @@
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> http://launcher.stalcraft.net/distributor
 Авторизация через дистрибьютора. Используется при входе через Steam в лаунчере.
-
+Так-же у ссылки есть вариант домена для EU игроков лаунчера: http://launcher-global.stalcraft.net/
 ### 1. Получение ссылки для логина через дистрибьютора
 Вызывается при нажатии кнопки "Войти через Steam"
 Пример ответа:
@@ -955,5 +955,6 @@ CDN сервер для системы EXENS
 JSON сервера (address_list) EU региона - Kesame (kwlxx)
 
 Добавил авторизацию через дистрибьютора - [@TeamDima](https://t.me/TeamDima)
+
 
 
