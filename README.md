@@ -27,6 +27,8 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetauth) - Авторизация в лаунчере
 
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetdistributor) - Авторизация в лаунчере через Steam
+
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlistservers) - Информация об игре: Онлайн, HTTP сиды, IP-адрес сервера и т.д.
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://tracker1.stalcraft.net | http://tracker2.stalcraft.net](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httptracker1stalcraftnet-----httptracker2stalcraftnet) - Torrent-трекеры (для раздачи файлов игры через протокол TORRENT)
@@ -132,7 +134,7 @@
 - `state=true` -
 - `login=LoginUser` - Логин пользователя EXBO
 - `pass=Qwerty123123` - Пароль
-- `bootstrap=123123123123123132131321313213123213` - Хеш запуска
+- `bootstrap=123123123123123132131321313213123213` - Хеш bootstrap.jar
 - `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID
 - `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
 - `protocol_version=3` - Версия протокола лаунчера
@@ -172,7 +174,7 @@
 - `login=LoginUser` - Логин пользователя EXBO
 - `pass=Qwerty123123` - Пароль
 - `passhash=asd3$d2sa$a1bc$.12312asd12313asd213.123dsa` - Хеш пароля 
-- `bootstrap=123123123123123132131321313213123213` - Хеш запуска
+- `bootstrap=123123123123123132131321313213123213` - Хеш bootstrap.jar
 - `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID
 - `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
 - `protocol_version=3` - Версия протокола лаунчера
@@ -215,15 +217,49 @@
 
 ```http://launcher.stalcraft.net/auth?secret=123456&login=UserLogin&id=43211234-1234-4321-1234-1231231231233&protocol_version=3```
 
+### 4. Автовход в лаунчер
+Вызывается при запуске лаунчера при наличии сессии в реестре.
+
+Пример ответа:
+```
+{
+    "displayLogin": null,
+    "genericError": null,
+    "licenseAccepted": true,
+    "loginURL": null,
+    "mailAbbreviation": "mai***@mail.ru",
+    "newEmail": null,
+    "newEmailHash": null,
+    "secretHash": null,
+    "session": "12345678-1234-1234-1234-123456789012",
+    "timeLeft": -1,
+    "token": "12345678-1234-1234-1234-123456789012",
+    "trueLogin": "userLogin",
+    "type": "OK",
+    "untilChangingFinish": null
+}
+```
+
+Имеет параметры:
+
+- `state=false` -
+- `login=...` - Логин пользователя EXBO
+- `session=...` - Сессия лаунчера (из реестра)
+- `bootstrap=123123123123123132131321313213123213` - Хеш bootstrap.jar
+- `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID
+- `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
+- `protocol_version=3` - Версия протокола лаунчера
+- `start=true` - 
+
+Пример правильной ссылки:
+
+```http://launcher.stalcraft.net/auth?state=false&login=UserLogin&session=12345678-1234-1234-1234-123456789012&bootstrap=123123123123123132131321313213123213&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&protocol_version=3&id=43211234-1234-4321-1234-12312312312333&start=true```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> http://launcher.stalcraft.net/distributor
-Авторизация через дистрибьютора (например, Steam). Используется после обычного `/auth` в лаунчере.
+Авторизация через дистрибьютора. Используется при входе через Steam в лаунчере.
 
 ### 1. Получение ссылки для логина через дистрибьютора
-
-Пример запроса:
-```http://launcher.stalcraft.net/distributor?state=true&distributor=steam&socket_port=12345&bootstrap=123123123123123132131321313213123213&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&id=43211234-1234-4321-1234-12312312312333&protocol_version=3```
-
+Вызывается при нажатии кнопки "Войти через Steam"
 Пример ответа:
 ```json
 {
@@ -248,20 +284,22 @@
 - `state=true` -
 - `distributor=steam` - Дистрибьютор
 - `socket_port=12345` - Порт сокета ExboLink
-- `bootstrap=...` - Хеш запуска
+- `bootstrap=...` - Хеш bootstrap.jar
 - `hwid=...` - HardWare ID
 - `id=...` - ID авторизации
 - `protocol_version=3` - Версия протокола лаунчера
 
+Пример запроса:
+```http://launcher.stalcraft.net/distributor?state=true&distributor=steam&socket_port=12345&bootstrap=123123123123123132131321313213123213&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&id=43211234-1234-4321-1234-12312312312333&protocol_version=3```
+
 ### 2. Возврат из браузера через URL-протокол
-После логина на сайте вызывается URL-протокол ExboLink:
+После логина на сайте вызывается URL-протокол EXBO, ведущий на файл ExboLink.exe:
 ```
 exbo://launcher/12345?action=distributor_auth&auth_token=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678999&verify_token=AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPp&session_key=9876543210zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA99
 ```
 
-### 3. Завершение авторизации через дистрибьютора
-Лаунчер отправляет следующий запрос:
-```http://launcher.stalcraft.net/distributor?state=true&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&id=43211234-1234-4321-1234-12312312312333&protocol_version=3&distributor=steam&distributor_session=123123123123123132131321313213123213&verify_token=AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPp```
+### 3. Авторизации через дистрибьютора
+Последний этап, запрос информации для входа в лаунчер.
 
 Пример ответа:
 ```json
@@ -282,6 +320,18 @@ exbo://launcher/12345?action=distributor_auth&auth_token=ABCDEFGHIJKLMNOPQRSTUVW
   "untilChangingFinish": null
 }
 ```
+Имеет параметры:
+
+- `state=true` -
+- `hwid=...` - HardWare ID
+- `distributor=steam` - Имя дистрибьютора
+- `id=...` - ID авторизации
+- `distributor_session=...` - ID авторизации через дистрибьютора
+- `verify_token=...` - Токен проверки авторизациии
+- `protocol_version=3` - Версия протокола лаунчера
+
+Пример запроса:
+```http://launcher.stalcraft.net/distributor?state=true&hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123&id=43211234-1234-4321-1234-12312312312333&protocol_version=3&distributor=steam&distributor_session=123123123123123132131321313213123213&verify_token=AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPp```
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> http://launcher.stalcraft.net/listServers
 Ссылка, отвечающая за получение информации об игровом сервере и игре STALCRAFT, такие как онлайн на сервере, HTTP сиды, размер игры в байтах и т.д.
@@ -902,3 +952,5 @@ CDN сервер для системы EXENS
 Некоторая информация об ссылках - [@oarer](https://github.com/oarer)
 
 JSON сервера (address_list) EU региона - Kesame (kwlxx)
+
+Добавил авторизацию через дистрибьютора - [@TeamDima](https://t.me/TeamDima)
