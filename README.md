@@ -27,7 +27,7 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetauth) - Авторизация в лаунчере
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/auth](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetdistributor) - Авторизация в лаунчере через Steam
+<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/distributor](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetdistributor) - Авторизация в лаунчере через Steam
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/kontora_mrazei.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [http://launcher.stalcraft.net/listServers](https://github.com/Art3mLapa/unofficial-stalcraft-api?tab=readme-ov-file#-httplauncherstalcraftnetlistservers) - Информация об игре: Онлайн, HTTP сиды, IP-адрес сервера и т.д.
 
@@ -954,3 +954,4 @@ CDN сервер для системы EXENS
 JSON сервера (address_list) EU региона - Kesame (kwlxx)
 
 Добавил авторизацию через дистрибьютора - [@TeamDima](https://t.me/TeamDima)
+
