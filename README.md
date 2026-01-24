@@ -247,7 +247,7 @@
 - `login=...` - Логин пользователя EXBO
 - `session=...` - Сессия лаунчера (из реестра)
 - `bootstrap=123123123123123132131321313213123213` - Хеш bootstrap.jar
-- `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID
+- `hwid=asdabcasdabc123321asdbcasdabc321asdabcasdabc123asdabcasdbc32123123123` - HardWare ID (есть защита от подмены, если HWID не совпадёт - WRONG_HWID)
 - `id=43211234-1234-4321-1234-12312312312333` - ID авторизации
 - `protocol_version=3` - Версия протокола лаунчера
 - `start=true` - 
@@ -955,6 +955,7 @@ CDN сервер для системы EXENS
 JSON сервера (address_list) EU региона - Kesame (kwlxx)
 
 Добавил авторизацию через дистрибьютора - [@TeamDima](https://t.me/TeamDima)
+
 
 
 
