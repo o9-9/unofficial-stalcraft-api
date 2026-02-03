@@ -61,12 +61,6 @@
 
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://backend.stalnote.ru/noauthorize/GameItems/uniq](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsbackendstalnoterunoauthorizegameitemsuniq) - Скрытые и публичные ID предметов, используемых в EAPI
 
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/slug/api/auction-history](https://github.com/Art3mLapa/unofficial-stalcraft-api/blo/main/README.md#--httpsstalcraftwikinext-apiauction-history) - История лотов предмета на аукционе
-
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/available-lots](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsstalcraftwikinext-apiavailable-lots) - Активные лоты предмета на аукционе
-
-<img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://stalcraft.wiki/api/exbo/item/barter/](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpsstalcraftwikiapiexboitembarter) - Рецепт бартера предмета
-
 <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="35" height="35"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="35" height="35"> [https://cdn.stalcraft.wiki/exbo_item_parser/listing.json](https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/README.md#--httpscdnstalcraftwikiexbo_item_parserlistingjson) - Сжатый статичный вариант stalcraft-database
 
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/post_logo.png" width="50" height="50"> http://launcher.stalcraft.net/metrics
@@ -784,147 +778,6 @@ CDN сервер для системы EXENS
 ]
 ```
 
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/slug/api/auction-history
-Получение истории лотов на аукционе
-
-Пример ответа:
-```json
-{
-  "total": 2359,
-  "prices": [
-    {
-      "amount": 1,
-      "price": 60000000,
-      "time": "2025-08-04T15:35:57Z",
-      "additional": {
-        "it_transf_count": 2,
-        "compens_2024_upgrade_attempts": -1,
-        "buyer": "Pathmage"
-      }
-    },
-    ...
-}
-```
-
-Имеет параметры:
-`region=ru` - регион игры
-`id=g43rp` - ID предмета из [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database)
-
-Обязательный заголовок при запросе:
-`X-Internal-Key=cb2b4565-a129-4e9c-bbd1-88427f79468d`
-
-Пример правильной ссылки:
-```https://stalcraft.wiki/slug/api/auction-history?region=ru&id=5rwq```
-
-
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/available-lots
-
-Активные лоты предмета на аукционе
-
-Пример ответа:
-```json
-{
-  "total": 75,
-  "lots": [
-    {
-      "itemId": "009n9",
-      "amount": 1,
-      "startPrice": 1111,
-      "buyoutPrice": 30000,
-      "startTime": "2025-10-11T18:35:04Z",
-      "endTime": "2025-10-13T18:35:04Z",
-      "additional": {}
-    },
-    ...
-    ]
-}
-```
-
-Имеет параметры:
-`region=ru` - регион игры
-`id=009n9` - ID предмета из [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database)
-
-Пример правильной ссылки:
-```https://stalcraft.wiki/api/available-lots?region=ru&id=009n9```
-
-## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://stalcraft.wiki/api/exbo/item/barter/
-Получение информации об бартере предмета.
-
-Пример ответа: 
-```json
-{
-  "exbo_id": "m06my",
-  "settlementTitles": [
-    {
-      "ru": "Лодочная станция",
-      "en": "Boathouse",
-      "es": "Cobertizo para botes",
-      "fr": "Hangar à bateaux"
-    }
-  ],
-  "settlementRequiredLevel": 4,
-  "recipes": [
-    {
-      "money": "2960",
-      "item": {
-        "exbo_id": "rwnrv",
-        "category": "armor/combined",
-        "lines": {
-          "ru": "Костюм «Горка-3»",
-          "en": "Gorka-3 Suit",
-          "es": "Traje Gorka-3",
-          "fr": "Combinaison Gorka-3"
-        }
-      },
-      "otherItems": [
-        {
-          "exbo_id": "191kg",
-          "category": "other/barter",
-          "lines": {
-            "ru": "Зеленая плесень",
-            "en": "Green Mold",
-            "es": "Moho verde",
-            "fr": "Moisissure verte"
-          },
-          "amount": 33
-        },
-        {
-          "exbo_id": "9dknl",
-          "category": "other/barter",
-          "lines": {
-            "ru": "Болотный камень",
-            "en": "Swamp Stone",
-            "es": "Piedra del pantano",
-            "fr": "Pierre des Marais"
-          },
-          "amount": 51
-        }
-      ]
-    }
-  ],
-  "useInto": [
-    {
-      "exbo_id": "n4rm1",
-      "category": "armor/combined",
-      "lines": {
-        "ru": "Костюм «Клептоман»",
-        "en": "Kleptomaniac Suit",
-        "es": "Traje de cleptómano",
-        "fr": "Combinaison Cleptomane"
-      }
-    }
-  ]
-}
-```
-
-Имеет параметры:
-
-`m06my` - ID предмета из [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database)
-
-Пример правильной ссылки:
-
-```https://stalcraft.wiki/api/exbo/item/barter/m06my?format=json```
-
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://cdn.stalcraft.wiki/exbo_item_parser/listing.json
 
 Сжатый вариант [stalcraft-database](https://github.com/EXBO-Studio/stalcraft-database) в виде JSON структуры с основной информацией об каждом предмете оттуда
@@ -956,6 +809,7 @@ CDN сервер для системы EXENS
 JSON сервера (address_list) EU региона - Kesame (kwlxx)
 
 Добавил авторизацию через дистрибьютора - [@TeamDima](https://t.me/TeamDima)
+
 
 
 
