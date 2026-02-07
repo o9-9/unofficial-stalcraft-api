@@ -800,6 +800,81 @@ CDN сервер для системы EXENS
 ]
 ```
 
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://lunar-client.ru/web-api/stalcraft/auction.php
+
+Получение истории купленных и активных лотов аукциона конкретного предмета.
+
+Пример ответа:
+```json
+{
+  "total": 144,
+  "prices": [
+    {
+      "amount": 1,
+      "price": 750000000,
+      "time": "2025-12-30T21:08:23Z",
+      "additional": {
+        "currentMotifDefault": 0,
+        "currentVisualDefault": 0,
+        "it_transf_count": 2,
+        "compens_2024_upgrade_attempts": -1,
+        "buyer": "ЗолотойНоми"
+      }
+    },
+    {
+      "amount": 1,
+      "price": 1250000000,
+      "time": "2025-11-28T16:47:31Z",
+      "additional": {
+        "compens_2024_upgrade_attempts": -1
+      }
+    },
+    ...
+    ]
+}
+```
+
+Имеет параметры:
+`action=history` - history - история купленных лотов, lots - история активных лотов
+`item=knmdv` - ID предмета из stalcraft-database
+`region=ru` - регион аукциона
+`limit=200` - лимит на кол-во лотов
+
+Пример правильной ссылки:
+- ```https://lunar-client.ru/web-api/stalcraft/auction.php?action=history&item=knmdv&region=ru&limit=200```
+
+## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/zerkalo_api.png" width="50" height="50"> <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/get_logo.png" width="50" height="50"> https://lunar-client.ru/web-api/stalcraft/arsenal.php?action=prices
+
+JSON таблица предметов для фарма репутации арсенала, с учетом цены предметов на аукционе в реальном времени
+
+Пример ответа:
+```json
+{
+  "success": true,
+  "data": {
+    "meta": {
+      "description": "Предметы для сдачи Арсену в STALCRAFT:X",
+      "targetReputation": 10000,
+      "lastUpdated": "2025-01-15"
+    },
+    "items": [
+      {
+        "name": "Малый артефактный фрагмент",
+        "id": "z3k1m",
+        "icon": "/icons/misc/z3k1m.png",
+        "color": "DEFAULT",
+        "reputation": 1,
+        "weight": 0.2,
+        "perTenK": 10000,
+        "weightPerTenK": 2000,
+        "avgPrice": 404,
+        "totalPrice": 4040000
+      },
+      ...
+    ]
+}
+```
+
 ## <img src="https://github.com/Art3mLapa/unofficial-stalcraft-api/blob/main/assets/icon_logo.png" width="50" height="50"> Благодарность
 
 Анализ и поиск ссылок - [HTTP Debugger](https://httpdebugger.com/)
@@ -809,6 +884,7 @@ CDN сервер для системы EXENS
 JSON сервера (address_list) EU региона - Kesame (kwlxx)
 
 Добавил авторизацию через дистрибьютора - [@TeamDima](https://t.me/TeamDima)
+
 
 
 
